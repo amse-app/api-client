@@ -1,4 +1,4 @@
-import 'package:api_client/api_client.dart';
+import 'package:amse_api_client/amse_api_client.dart';
 
 void main() {
   var awesome = Awesome();
