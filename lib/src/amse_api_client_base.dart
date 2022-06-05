@@ -31,4 +31,6 @@ class AmseApi {
   EventRepo get event => _event;
   CompRepo get competitions => _comps;
   ParticipantsRepo get participants => _participants;
+
+  UserInfo? get user => AuthInfo().user;
 }
