@@ -26,7 +26,7 @@ class AuthInfo {
     _userInfo = UserInfo(
       id: int.parse(payload["sub"]),
       name: payload["name"],
-      roles: payload["X-Amse-Claims"]["roles"],
+      roles: payload["X-Amse-Claims"]["roles"] as List<String>,
     );
   }
 
