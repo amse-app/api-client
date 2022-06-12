@@ -23,10 +23,14 @@ class AuthInfo {
     var encPayload = token.split(".")[1];
     var normalizedPayload = base64Url.normalize(encPayload);
     var payload = _stringToBase64.decode(normalizedPayload);
+    List<String> roles = [];
+    for (var r in payload["X-Amse-Claims"]["roles"]) {
+      roles.add(r.toString());
+    }
     _userInfo = UserInfo(
       id: int.parse(payload["sub"]),
       name: payload["name"],
-      roles: payload["X-Amse-Claims"]["roles"] as List<String>,
+      roles: roles,
     );
   }
 
