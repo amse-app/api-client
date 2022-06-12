@@ -24,7 +24,7 @@ class AuthInfo {
     var normalizedPayload = base64Url.normalize(encPayload);
     var payload = _stringToBase64.decode(normalizedPayload);
     _userInfo = UserInfo(
-      id: payload["sub"],
+      id: int.parse(payload["sub"]),
       name: payload["name"],
       roles: payload["X-Amse-Claims"]["roles"],
     );
@@ -42,6 +42,7 @@ class AuthInfo {
     if (!isLoggedIn) {
       return null;
     }
+    return _userInfo;
   }
 }
 
