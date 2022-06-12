@@ -21,7 +21,8 @@ class AuthInfo {
 
   void _setUserInfo() {
     var encPayload = token.split(".")[1];
-    var payload = _stringToBase64.decode(encPayload);
+    var normalizedPayload = base64Url.normalize(encPayload);
+    var payload = _stringToBase64.decode(normalizedPayload);
     _userInfo = UserInfo(
       id: payload["sub"],
       name: payload["name"],
