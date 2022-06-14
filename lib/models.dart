@@ -7,3 +7,6 @@ export 'src/event/models/event.dart' show Event;
 export 'src/participants/models/participant.dart'
     show Participant, ParticipantCompetition;
 export 'src/participants/models/min_participant.dart' show MinParticipant;
+
+export 'src/users/models/min_user.dart' show MinUser;
+export 'src/users/models/user.dart' show User;
