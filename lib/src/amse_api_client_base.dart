@@ -1,3 +1,4 @@
+import 'package:amse_api_client/src/health.dart';
 import 'package:amse_api_client/src/participants/participants_repo.dart';
 
 import 'authorization/auth_repo.dart';
@@ -13,6 +14,7 @@ class AmseApi {
   final EventRepo _event;
   final CompRepo _comps;
   final ParticipantsRepo _participants;
+  final Health _health;
 
   AmseApi(Uri url)
       : _url = url,
@@ -20,7 +22,8 @@ class AmseApi {
         _auth = AuthRepo(url),
         _event = EventRepo(url),
         _comps = CompRepo(url),
-        _participants = ParticipantsRepo(url);
+        _participants = ParticipantsRepo(url),
+        _health = Health(url);
 
   bool get isLoggedIn => AuthInfo().isLoggedIn;
 
@@ -32,5 +35,11 @@ class AmseApi {
   CompRepo get competitions => _comps;
   ParticipantsRepo get participants => _participants;
 
+  Health get health => _health;
+
   UserInfo? get user => AuthInfo().user;
+
+  static Future<bool> checkHealth(Uri url) async {
+    return Health(url).checkHealth();
+  }
 }
