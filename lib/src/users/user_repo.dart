@@ -1,9 +1,8 @@
 import 'dart:convert';
 
-import 'package:amse_api_client/models.dart';
-import 'package:amse_api_client/src/auth.dart';
-import 'package:amse_api_client/src/client.dart';
-
+import 'models/min_user.dart';
+import '../auth.dart';
+import '../client.dart';
 import 'models/user.dart';
 
 class UserRepo {

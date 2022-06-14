@@ -1,7 +1,6 @@
-import 'package:amse_api_client/src/health.dart';
-import 'package:amse_api_client/src/participants/participants_repo.dart';
-import 'package:amse_api_client/src/users/user_repo.dart';
-
+import 'health.dart';
+import 'participants/participants_repo.dart';
+import 'users/user_repo.dart';
 import 'authorization/auth_repo.dart';
 import 'results/results_repo.dart';
 import 'event/event_repo.dart';
