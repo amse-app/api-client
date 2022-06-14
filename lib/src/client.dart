@@ -15,7 +15,7 @@ class AmseClient extends http.BaseClient {
   @override
   Future<http.StreamedResponse> send(http.BaseRequest request) {
     if (_token.isNotEmpty) {
-      request.headers["Authorization"] = _token;
+      request.headers["Authorization"] = "Bearer $_token";
     }
     if (request.method == "POST" || request.method == "PATCH") {
       request.headers["Content-Type"] = "application/json";
