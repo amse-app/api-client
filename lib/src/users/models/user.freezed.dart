@@ -24,7 +24,8 @@ mixin _$User {
   String get username => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   List<String> get roles => throw _privateConstructorUsedError;
-  DateTime get lastLogin => throw _privateConstructorUsedError;
+  DateTime? get lastLogin => throw _privateConstructorUsedError;
+  DateTime get createdAt => throw _privateConstructorUsedError;
   DateTime get updatedAt => throw _privateConstructorUsedError;
   int? get recoveryCode => throw _privateConstructorUsedError;
   Map<String, dynamic>? get data => throw _privateConstructorUsedError;
@@ -43,7 +44,8 @@ abstract class $UserCopyWith<$Res> {
       String username,
       String? name,
       List<String> roles,
-      DateTime lastLogin,
+      DateTime? lastLogin,
+      DateTime createdAt,
       DateTime updatedAt,
       int? recoveryCode,
       Map<String, dynamic>? data});
@@ -64,6 +66,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? name = freezed,
     Object? roles = freezed,
     Object? lastLogin = freezed,
+    Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? recoveryCode = freezed,
     Object? data = freezed,
@@ -88,6 +91,10 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       lastLogin: lastLogin == freezed
           ? _value.lastLogin
           : lastLogin // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
       updatedAt: updatedAt == freezed
           ? _value.updatedAt
@@ -115,7 +122,8 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String username,
       String? name,
       List<String> roles,
-      DateTime lastLogin,
+      DateTime? lastLogin,
+      DateTime createdAt,
       DateTime updatedAt,
       int? recoveryCode,
       Map<String, dynamic>? data});
@@ -137,6 +145,7 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? name = freezed,
     Object? roles = freezed,
     Object? lastLogin = freezed,
+    Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? recoveryCode = freezed,
     Object? data = freezed,
@@ -161,6 +170,10 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       lastLogin: lastLogin == freezed
           ? _value.lastLogin
           : lastLogin // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
       updatedAt: updatedAt == freezed
           ? _value.updatedAt
@@ -186,7 +199,8 @@ class _$_User implements _User {
       required this.username,
       this.name,
       required final List<String> roles,
-      required this.lastLogin,
+      this.lastLogin,
+      required this.createdAt,
       required this.updatedAt,
       this.recoveryCode,
       final Map<String, dynamic>? data})
@@ -209,7 +223,9 @@ class _$_User implements _User {
   }
 
   @override
-  final DateTime lastLogin;
+  final DateTime? lastLogin;
+  @override
+  final DateTime createdAt;
   @override
   final DateTime updatedAt;
   @override
@@ -225,7 +241,7 @@ class _$_User implements _User {
 
   @override
   String toString() {
-    return 'User(id: $id, username: $username, name: $name, roles: $roles, lastLogin: $lastLogin, updatedAt: $updatedAt, recoveryCode: $recoveryCode, data: $data)';
+    return 'User(id: $id, username: $username, name: $name, roles: $roles, lastLogin: $lastLogin, createdAt: $createdAt, updatedAt: $updatedAt, recoveryCode: $recoveryCode, data: $data)';
   }
 
   @override
@@ -238,6 +254,7 @@ class _$_User implements _User {
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other._roles, _roles) &&
             const DeepCollectionEquality().equals(other.lastLogin, lastLogin) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
             const DeepCollectionEquality().equals(other.updatedAt, updatedAt) &&
             const DeepCollectionEquality()
                 .equals(other.recoveryCode, recoveryCode) &&
@@ -253,6 +270,7 @@ class _$_User implements _User {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(_roles),
       const DeepCollectionEquality().hash(lastLogin),
+      const DeepCollectionEquality().hash(createdAt),
       const DeepCollectionEquality().hash(updatedAt),
       const DeepCollectionEquality().hash(recoveryCode),
       const DeepCollectionEquality().hash(_data));
@@ -274,7 +292,8 @@ abstract class _User implements User {
       required final String username,
       final String? name,
       required final List<String> roles,
-      required final DateTime lastLogin,
+      final DateTime? lastLogin,
+      required final DateTime createdAt,
       required final DateTime updatedAt,
       final int? recoveryCode,
       final Map<String, dynamic>? data}) = _$_User;
@@ -290,7 +309,9 @@ abstract class _User implements User {
   @override
   List<String> get roles => throw _privateConstructorUsedError;
   @override
-  DateTime get lastLogin => throw _privateConstructorUsedError;
+  DateTime? get lastLogin => throw _privateConstructorUsedError;
+  @override
+  DateTime get createdAt => throw _privateConstructorUsedError;
   @override
   DateTime get updatedAt => throw _privateConstructorUsedError;
   @override
