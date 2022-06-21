@@ -18,7 +18,7 @@ class UserRepo {
       final res = await client.post(_url.replace(path: "users"),
           body: jsonEncode(payload));
       if (res.statusCode == 201) {
-        return jsonDecode(utf8.decode(res.bodyBytes))["id"] as int;
+        return int.parse(jsonDecode(utf8.decode(res.bodyBytes))["id"]);
       } else {
         throw Exception("couldnt create user");
       }

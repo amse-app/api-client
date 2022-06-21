@@ -17,7 +17,7 @@ class ParticipantsRepo {
       final res = await client.post(_url.replace(path: "participants"),
           body: jsonEncode(participant.toJson()));
       if (res.statusCode == 200) {
-        return jsonDecode(utf8.decode(res.bodyBytes))["id"] as int;
+        return int.parse(jsonDecode(utf8.decode(res.bodyBytes))["id"]);
       } else {
         throw Exception("Couldnt create participant");
       }
