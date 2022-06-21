@@ -18,7 +18,7 @@ class UserRepo {
     String? name,
   }) async {
     AuthInfo.ensureLoggedIn();
-    Map<String, Object> payload = {"username": username, "password": password};
+    Map<String, Object> payload = {"username": username, "passwd": password};
     if (admin) {
       payload["roles"] = ["user", "admin"];
     } else {
