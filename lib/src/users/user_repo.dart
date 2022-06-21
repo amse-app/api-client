@@ -10,9 +10,26 @@ class UserRepo {
 
   const UserRepo(Uri url) : _url = url;
 
-  Future<String> create(User user) async {
+  Future<String> create({
+    required String username,
+    required String password,
+    bool admin = false,
+    Map<String, dynamic>? data,
+    String? name,
+  }) async {
     AuthInfo.ensureLoggedIn();
-    final payload = user.toJson();
+    Map<String, Object> payload = {"username": username, "password": password};
+    if (admin) {
+      payload["roles"] = ["user", "admin"];
+    } else {
+      payload["roles"] = ["user"];
+    }
+    if (name != null) {
+      payload["name"] = name;
+    }
+    if (data != null) {
+      payload["data"] = data;
+    }
     final client = AmseClient();
     try {
       final res = await client.post(_url.replace(path: "users"),
