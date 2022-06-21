@@ -28,7 +28,7 @@ class AuthInfo {
       roles.add(r.toString());
     }
     _userInfo = UserInfo(
-      id: int.parse(payload["sub"]),
+      id: payload["sub"],
       name: payload["name"],
       roles: roles,
     );
@@ -52,7 +52,7 @@ class AuthInfo {
 
 class UserInfo {
   String name;
-  int id;
+  String id;
   List<String> roles;
 
   UserInfo({required this.id, required this.name, required this.roles});

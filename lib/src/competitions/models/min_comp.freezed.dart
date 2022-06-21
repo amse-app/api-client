@@ -20,7 +20,7 @@ MinComp _$MinCompFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MinComp {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get short => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -32,7 +32,7 @@ mixin _$MinComp {
 abstract class $MinCompCopyWith<$Res> {
   factory $MinCompCopyWith(MinComp value, $Res Function(MinComp) then) =
       _$MinCompCopyWithImpl<$Res>;
-  $Res call({int id, String short});
+  $Res call({String id, String short});
 }
 
 /// @nodoc
@@ -52,7 +52,7 @@ class _$MinCompCopyWithImpl<$Res> implements $MinCompCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       short: short == freezed
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
@@ -67,7 +67,7 @@ abstract class _$$_MinCompCopyWith<$Res> implements $MinCompCopyWith<$Res> {
           _$_MinComp value, $Res Function(_$_MinComp) then) =
       __$$_MinCompCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String short});
+  $Res call({String id, String short});
 }
 
 /// @nodoc
@@ -88,7 +88,7 @@ class __$$_MinCompCopyWithImpl<$Res> extends _$MinCompCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       short: short == freezed
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
@@ -106,7 +106,7 @@ class _$_MinComp implements _MinComp {
       _$$_MinCompFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String short;
 
@@ -143,13 +143,13 @@ class _$_MinComp implements _MinComp {
 }
 
 abstract class _MinComp implements MinComp {
-  const factory _MinComp({required final int id, required final String short}) =
-      _$_MinComp;
+  const factory _MinComp(
+      {required final String id, required final String short}) = _$_MinComp;
 
   factory _MinComp.fromJson(Map<String, dynamic> json) = _$_MinComp.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @override
   String get short => throw _privateConstructorUsedError;
   @override

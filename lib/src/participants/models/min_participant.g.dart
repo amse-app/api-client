@@ -8,13 +8,14 @@ part of 'min_participant.dart';
 
 _$_MinParticipant _$$_MinParticipantFromJson(Map<String, dynamic> json) =>
     _$_MinParticipant(
-      id: json['id'] as int?,
+      id: json['id'] as String?,
       name: json['name'] as String?,
       birth: json['birth'] == null
           ? null
           : DateTime.parse(json['birth'] as String),
       number: json['number'] as String?,
-      comps: (json['comps'] as List<dynamic>?)?.map((e) => e as int).toList(),
+      comps:
+          (json['comps'] as List<dynamic>?)?.map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$$_MinParticipantToJson(_$_MinParticipant instance) =>

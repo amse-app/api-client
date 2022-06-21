@@ -7,7 +7,7 @@ part of 'min_user.dart';
 // **************************************************************************
 
 _$_MinUser _$$_MinUserFromJson(Map<String, dynamic> json) => _$_MinUser(
-      id: json['id'] as int,
+      id: json['id'] as String,
       username: json['username'] as String,
       name: json['name'] as String?,
     );

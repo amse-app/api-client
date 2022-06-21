@@ -10,7 +10,7 @@ class UserRepo {
 
   const UserRepo(Uri url) : _url = url;
 
-  Future<int> create(User user) async {
+  Future<String> create(User user) async {
     AuthInfo.ensureLoggedIn();
     final payload = user.toJson();
     final client = AmseClient();
@@ -18,7 +18,7 @@ class UserRepo {
       final res = await client.post(_url.replace(path: "users"),
           body: jsonEncode(payload));
       if (res.statusCode == 201) {
-        return int.parse(jsonDecode(utf8.decode(res.bodyBytes))["id"]);
+        return jsonDecode(utf8.decode(res.bodyBytes))["id"];
       } else {
         throw Exception("couldnt create user");
       }
@@ -48,7 +48,7 @@ class UserRepo {
     }
   }
 
-  Future<User> getOne(int id) async {
+  Future<User> getOne(String id) async {
     AuthInfo.ensureLoggedIn();
     final client = AmseClient();
     try {
@@ -63,11 +63,11 @@ class UserRepo {
     }
   }
 
-  Future<void> update(int id) async {
+  Future<void> update(String id) async {
     throw UnimplementedError();
   }
 
-  Future<void> delete(int id) async {
+  Future<void> delete(String id) async {
     AuthInfo.ensureLoggedIn();
     final client = AmseClient();
     try {

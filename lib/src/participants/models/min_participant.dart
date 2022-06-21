@@ -6,11 +6,11 @@ part 'min_participant.g.dart';
 @freezed
 class MinParticipant with _$MinParticipant {
   const factory MinParticipant({
-    int? id,
+    String? id,
     String? name,
     DateTime? birth,
     String? number,
-    List<int>? comps,
+    List<String>? comps,
   }) = _MinParticipant;
 
   factory MinParticipant.fromJson(Map<String, dynamic> json) =>

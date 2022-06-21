@@ -7,7 +7,7 @@ part of 'min_comp.dart';
 // **************************************************************************
 
 _$_MinComp _$$_MinCompFromJson(Map<String, dynamic> json) => _$_MinComp(
-      id: json['id'] as int,
+      id: json['id'] as String,
       short: json['short'] as String,
     );
 

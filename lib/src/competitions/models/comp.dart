@@ -8,7 +8,7 @@ part 'comp.g.dart';
 @freezed
 class Comp with _$Comp {
   factory Comp({
-    int? id,
+    String? id,
     required String short,
     String? name,
     String? description,

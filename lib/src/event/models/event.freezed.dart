@@ -20,7 +20,7 @@ Event _$EventFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Event {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get short => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ abstract class $EventCopyWith<$Res> {
   factory $EventCopyWith(Event value, $Res Function(Event) then) =
       _$EventCopyWithImpl<$Res>;
   $Res call(
-      {int id,
+      {String id,
       String short,
       String? name,
       String? description,
@@ -66,7 +66,7 @@ class _$EventCopyWithImpl<$Res> implements $EventCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       short: short == freezed
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
@@ -97,7 +97,7 @@ abstract class _$$_EventCopyWith<$Res> implements $EventCopyWith<$Res> {
       __$$_EventCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int id,
+      {String id,
       String short,
       String? name,
       String? description,
@@ -127,7 +127,7 @@ class __$$_EventCopyWithImpl<$Res> extends _$EventCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       short: short == freezed
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
@@ -167,7 +167,7 @@ class _$_Event implements _Event {
       _$$_EventFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String short;
   @override
@@ -222,7 +222,7 @@ class _$_Event implements _Event {
 
 abstract class _Event implements Event {
   const factory _Event(
-      {required final int id,
+      {required final String id,
       required final String short,
       final String? name,
       final String? description,
@@ -232,7 +232,7 @@ abstract class _Event implements Event {
   factory _Event.fromJson(Map<String, dynamic> json) = _$_Event.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @override
   String get short => throw _privateConstructorUsedError;
   @override

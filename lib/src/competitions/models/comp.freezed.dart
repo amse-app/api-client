@@ -20,7 +20,7 @@ Comp _$CompFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Comp {
-  int? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String get short => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -39,7 +39,7 @@ abstract class $CompCopyWith<$Res> {
   factory $CompCopyWith(Comp value, $Res Function(Comp) then) =
       _$CompCopyWithImpl<$Res>;
   $Res call(
-      {int? id,
+      {String? id,
       String short,
       String? name,
       String? description,
@@ -75,7 +75,7 @@ class _$CompCopyWithImpl<$Res> implements $CompCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       short: short == freezed
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
@@ -128,7 +128,7 @@ abstract class _$$_CompCopyWith<$Res> implements $CompCopyWith<$Res> {
       __$$_CompCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? id,
+      {String? id,
       String short,
       String? name,
       String? description,
@@ -167,7 +167,7 @@ class __$$_CompCopyWithImpl<$Res> extends _$CompCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       short: short == freezed
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
@@ -216,7 +216,7 @@ class _$_Comp implements _Comp {
   factory _$_Comp.fromJson(Map<String, dynamic> json) => _$$_CompFromJson(json);
 
   @override
-  final int? id;
+  final String? id;
   @override
   final String short;
   @override
@@ -279,7 +279,7 @@ class _$_Comp implements _Comp {
 
 abstract class _Comp implements Comp {
   factory _Comp(
-      {final int? id,
+      {final String? id,
       required final String short,
       final String? name,
       final String? description,
@@ -291,7 +291,7 @@ abstract class _Comp implements Comp {
   factory _Comp.fromJson(Map<String, dynamic> json) = _$_Comp.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   String get short => throw _privateConstructorUsedError;
   @override

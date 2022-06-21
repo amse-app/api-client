@@ -7,7 +7,7 @@ part of 'event.dart';
 // **************************************************************************
 
 _$_Event _$$_EventFromJson(Map<String, dynamic> json) => _$_Event(
-      id: json['id'] as int,
+      id: json['id'] as String,
       short: json['short'] as String,
       name: json['name'] as String?,
       description: json['description'] as String?,

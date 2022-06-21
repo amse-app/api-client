@@ -9,7 +9,7 @@ class EventRepo {
 
   const EventRepo(Uri url) : _url = url;
 
-  Future<int> create(
+  Future<String> create(
       {required String short, String? name, String? description}) async {
     AuthInfo.ensureLoggedIn();
     var payload = {"short": short};

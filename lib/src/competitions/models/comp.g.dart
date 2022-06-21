@@ -7,7 +7,7 @@ part of 'comp.dart';
 // **************************************************************************
 
 _$_Comp _$$_CompFromJson(Map<String, dynamic> json) => _$_Comp(
-      id: json['id'] as int?,
+      id: json['id'] as String?,
       short: json['short'] as String,
       name: json['name'] as String?,
       description: json['description'] as String?,

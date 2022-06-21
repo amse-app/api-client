@@ -20,7 +20,7 @@ MinUser _$MinUserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MinUser {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get username => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
 
@@ -33,7 +33,7 @@ mixin _$MinUser {
 abstract class $MinUserCopyWith<$Res> {
   factory $MinUserCopyWith(MinUser value, $Res Function(MinUser) then) =
       _$MinUserCopyWithImpl<$Res>;
-  $Res call({int id, String username, String? name});
+  $Res call({String id, String username, String? name});
 }
 
 /// @nodoc
@@ -54,7 +54,7 @@ class _$MinUserCopyWithImpl<$Res> implements $MinUserCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -73,7 +73,7 @@ abstract class _$$_MinUserCopyWith<$Res> implements $MinUserCopyWith<$Res> {
           _$_MinUser value, $Res Function(_$_MinUser) then) =
       __$$_MinUserCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String username, String? name});
+  $Res call({String id, String username, String? name});
 }
 
 /// @nodoc
@@ -95,7 +95,7 @@ class __$$_MinUserCopyWithImpl<$Res> extends _$MinUserCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       username: username == freezed
           ? _value.username
           : username // ignore: cast_nullable_to_non_nullable
@@ -117,7 +117,7 @@ class _$_MinUser implements _MinUser {
       _$$_MinUserFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String username;
   @override
@@ -159,14 +159,14 @@ class _$_MinUser implements _MinUser {
 
 abstract class _MinUser implements MinUser {
   factory _MinUser(
-      {required final int id,
+      {required final String id,
       required final String username,
       final String? name}) = _$_MinUser;
 
   factory _MinUser.fromJson(Map<String, dynamic> json) = _$_MinUser.fromJson;
 
   @override
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   @override
   String get username => throw _privateConstructorUsedError;
   @override

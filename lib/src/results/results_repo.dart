@@ -9,7 +9,7 @@ class ResultsRepo {
   const ResultsRepo(Uri url) : _url = url;
 
   Future<int> add(
-      {required bool q, required int value, required int id}) async {
+      {required bool q, required int value, required String id}) async {
     AuthInfo.ensureLoggedIn();
     var payload = {"q": q, "value": value};
     var client = AmseClient();
@@ -26,7 +26,7 @@ class ResultsRepo {
     }
   }
 
-  Future<void> delete({required bool q, required int id}) async {
+  Future<void> delete({required bool q, required String id}) async {
     AuthInfo.ensureLoggedIn();
     var client = AmseClient();
     try {

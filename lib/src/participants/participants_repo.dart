@@ -10,14 +10,14 @@ class ParticipantsRepo {
 
   ParticipantsRepo(Uri url) : _url = url;
 
-  Future<int> create(MinParticipant participant) async {
+  Future<String> create(MinParticipant participant) async {
     AuthInfo.ensureLoggedIn();
     final client = AmseClient();
     try {
       final res = await client.post(_url.replace(path: "participants"),
           body: jsonEncode(participant.toJson()));
       if (res.statusCode == 200) {
-        return int.parse(jsonDecode(utf8.decode(res.bodyBytes))["id"]);
+        return jsonDecode(utf8.decode(res.bodyBytes))["id"];
       } else {
         throw Exception("Couldnt create participant");
       }
@@ -47,7 +47,7 @@ class ParticipantsRepo {
     }
   }
 
-  Future<List<MinParticipant>> getAllWithComp(int id) async {
+  Future<List<MinParticipant>> getAllWithComp(String id) async {
     AuthInfo.ensureLoggedIn();
     final client = AmseClient();
     try {
@@ -68,7 +68,7 @@ class ParticipantsRepo {
     }
   }
 
-  Future<Participant> get(int id) async {
+  Future<Participant> get(String id) async {
     AuthInfo.ensureLoggedIn();
     final client = AmseClient();
     try {
@@ -83,11 +83,11 @@ class ParticipantsRepo {
     }
   }
 
-  Future<void> update(int id) async {
+  Future<void> update(String id) async {
     throw UnimplementedError();
   }
 
-  Future<void> delete(int id) async {
+  Future<void> delete(String id) async {
     AuthInfo.ensureLoggedIn();
     final client = AmseClient();
     try {

@@ -20,11 +20,11 @@ MinParticipant _$MinParticipantFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MinParticipant {
-  int? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   DateTime? get birth => throw _privateConstructorUsedError;
   String? get number => throw _privateConstructorUsedError;
-  List<int>? get comps => throw _privateConstructorUsedError;
+  List<String>? get comps => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,11 +38,11 @@ abstract class $MinParticipantCopyWith<$Res> {
           MinParticipant value, $Res Function(MinParticipant) then) =
       _$MinParticipantCopyWithImpl<$Res>;
   $Res call(
-      {int? id,
+      {String? id,
       String? name,
       DateTime? birth,
       String? number,
-      List<int>? comps});
+      List<String>? comps});
 }
 
 /// @nodoc
@@ -66,7 +66,7 @@ class _$MinParticipantCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -82,7 +82,7 @@ class _$MinParticipantCopyWithImpl<$Res>
       comps: comps == freezed
           ? _value.comps
           : comps // ignore: cast_nullable_to_non_nullable
-              as List<int>?,
+              as List<String>?,
     ));
   }
 }
@@ -95,11 +95,11 @@ abstract class _$$_MinParticipantCopyWith<$Res>
       __$$_MinParticipantCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? id,
+      {String? id,
       String? name,
       DateTime? birth,
       String? number,
-      List<int>? comps});
+      List<String>? comps});
 }
 
 /// @nodoc
@@ -125,7 +125,7 @@ class __$$_MinParticipantCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -141,7 +141,7 @@ class __$$_MinParticipantCopyWithImpl<$Res>
       comps: comps == freezed
           ? _value._comps
           : comps // ignore: cast_nullable_to_non_nullable
-              as List<int>?,
+              as List<String>?,
     ));
   }
 }
@@ -150,23 +150,23 @@ class __$$_MinParticipantCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_MinParticipant implements _MinParticipant {
   const _$_MinParticipant(
-      {this.id, this.name, this.birth, this.number, final List<int>? comps})
+      {this.id, this.name, this.birth, this.number, final List<String>? comps})
       : _comps = comps;
 
   factory _$_MinParticipant.fromJson(Map<String, dynamic> json) =>
       _$$_MinParticipantFromJson(json);
 
   @override
-  final int? id;
+  final String? id;
   @override
   final String? name;
   @override
   final DateTime? birth;
   @override
   final String? number;
-  final List<int>? _comps;
+  final List<String>? _comps;
   @override
-  List<int>? get comps {
+  List<String>? get comps {
     final value = _comps;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -213,17 +213,17 @@ class _$_MinParticipant implements _MinParticipant {
 
 abstract class _MinParticipant implements MinParticipant {
   const factory _MinParticipant(
-      {final int? id,
+      {final String? id,
       final String? name,
       final DateTime? birth,
       final String? number,
-      final List<int>? comps}) = _$_MinParticipant;
+      final List<String>? comps}) = _$_MinParticipant;
 
   factory _MinParticipant.fromJson(Map<String, dynamic> json) =
       _$_MinParticipant.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   String? get name => throw _privateConstructorUsedError;
   @override
@@ -231,7 +231,7 @@ abstract class _MinParticipant implements MinParticipant {
   @override
   String? get number => throw _privateConstructorUsedError;
   @override
-  List<int>? get comps => throw _privateConstructorUsedError;
+  List<String>? get comps => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_MinParticipantCopyWith<_$_MinParticipant> get copyWith =>

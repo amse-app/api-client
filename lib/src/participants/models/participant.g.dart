@@ -8,7 +8,7 @@ part of 'participant.dart';
 
 _$_Participant _$$_ParticipantFromJson(Map<String, dynamic> json) =>
     _$_Participant(
-      id: json['id'] as int?,
+      id: json['id'] as String?,
       name: json['name'] as String?,
       birth: json['birth'] == null
           ? null
@@ -42,8 +42,8 @@ Map<String, dynamic> _$$_ParticipantToJson(_$_Participant instance) =>
 _$_ParticipantCompetition _$$_ParticipantCompetitionFromJson(
         Map<String, dynamic> json) =>
     _$_ParticipantCompetition(
-      id: json['id'] as int?,
-      competitionId: json['competitionId'] as int?,
+      id: json['id'] as String?,
+      competitionId: json['competitionId'] as String?,
       rawResult: json['rawResult'] as int?,
       result: json['result'] as int?,
       qRawResult: json['qRawResult'] as int?,

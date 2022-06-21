@@ -10,7 +10,7 @@ class CompRepo {
 
   const CompRepo(Uri url) : _url = url;
 
-  Future<int> create(Comp comp) async {
+  Future<String> create(Comp comp) async {
     AuthInfo.ensureLoggedIn();
     final payload = comp.toJson();
     final client = AmseClient();
@@ -18,7 +18,7 @@ class CompRepo {
       final res = await client.post(_url.replace(path: "competitions"),
           body: jsonEncode(payload));
       if (res.statusCode == 201) {
-        return int.parse(jsonDecode(utf8.decode(res.bodyBytes))["id"]);
+        return jsonDecode(utf8.decode(res.bodyBytes))["id"];
       } else {
         throw Exception("couldnt create comp");
       }
@@ -48,7 +48,7 @@ class CompRepo {
     }
   }
 
-  Future<Comp> getOne(int id) async {
+  Future<Comp> getOne(String id) async {
     AuthInfo.ensureLoggedIn();
     final client = AmseClient();
     try {
@@ -63,11 +63,11 @@ class CompRepo {
     }
   }
 
-  Future<void> update({required int id}) async {
+  Future<void> update({required String id}) async {
     throw UnimplementedError();
   }
 
-  Future<void> delete(int id) async {
+  Future<void> delete(String id) async {
     AuthInfo.ensureLoggedIn();
     final client = AmseClient();
     try {

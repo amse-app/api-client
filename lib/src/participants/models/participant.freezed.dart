@@ -20,7 +20,7 @@ Participant _$ParticipantFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Participant {
-  int? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   DateTime? get birth => throw _privateConstructorUsedError;
   String? get number => throw _privateConstructorUsedError;
@@ -42,7 +42,7 @@ abstract class $ParticipantCopyWith<$Res> {
           Participant value, $Res Function(Participant) then) =
       _$ParticipantCopyWithImpl<$Res>;
   $Res call(
-      {int? id,
+      {String? id,
       String? name,
       DateTime? birth,
       String? number,
@@ -75,7 +75,7 @@ class _$ParticipantCopyWithImpl<$Res> implements $ParticipantCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -116,7 +116,7 @@ abstract class _$$_ParticipantCopyWith<$Res>
       __$$_ParticipantCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? id,
+      {String? id,
       String? name,
       DateTime? birth,
       String? number,
@@ -151,7 +151,7 @@ class __$$_ParticipantCopyWithImpl<$Res> extends _$ParticipantCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -203,7 +203,7 @@ class _$_Participant implements _Participant {
       _$$_ParticipantFromJson(json);
 
   @override
-  final int? id;
+  final String? id;
   @override
   final String? name;
   @override
@@ -279,7 +279,7 @@ class _$_Participant implements _Participant {
 
 abstract class _Participant implements Participant {
   const factory _Participant(
-      {final int? id,
+      {final String? id,
       final String? name,
       final DateTime? birth,
       final String? number,
@@ -292,7 +292,7 @@ abstract class _Participant implements Participant {
       _$_Participant.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   String? get name => throw _privateConstructorUsedError;
   @override
@@ -321,8 +321,8 @@ ParticipantCompetition _$ParticipantCompetitionFromJson(
 
 /// @nodoc
 mixin _$ParticipantCompetition {
-  int? get id => throw _privateConstructorUsedError;
-  int? get competitionId => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
+  String? get competitionId => throw _privateConstructorUsedError;
   int? get rawResult => throw _privateConstructorUsedError;
   int? get result => throw _privateConstructorUsedError;
   int? get qRawResult => throw _privateConstructorUsedError;
@@ -340,8 +340,8 @@ abstract class $ParticipantCompetitionCopyWith<$Res> {
           $Res Function(ParticipantCompetition) then) =
       _$ParticipantCompetitionCopyWithImpl<$Res>;
   $Res call(
-      {int? id,
-      int? competitionId,
+      {String? id,
+      String? competitionId,
       int? rawResult,
       int? result,
       int? qRawResult,
@@ -370,11 +370,11 @@ class _$ParticipantCompetitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       competitionId: competitionId == freezed
           ? _value.competitionId
           : competitionId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       rawResult: rawResult == freezed
           ? _value.rawResult
           : rawResult // ignore: cast_nullable_to_non_nullable
@@ -403,8 +403,8 @@ abstract class _$$_ParticipantCompetitionCopyWith<$Res>
       __$$_ParticipantCompetitionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {int? id,
-      int? competitionId,
+      {String? id,
+      String? competitionId,
       int? rawResult,
       int? result,
       int? qRawResult,
@@ -436,11 +436,11 @@ class __$$_ParticipantCompetitionCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       competitionId: competitionId == freezed
           ? _value.competitionId
           : competitionId // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as String?,
       rawResult: rawResult == freezed
           ? _value.rawResult
           : rawResult // ignore: cast_nullable_to_non_nullable
@@ -476,9 +476,9 @@ class _$_ParticipantCompetition implements _ParticipantCompetition {
       _$$_ParticipantCompetitionFromJson(json);
 
   @override
-  final int? id;
+  final String? id;
   @override
-  final int? competitionId;
+  final String? competitionId;
   @override
   final int? rawResult;
   @override
@@ -533,8 +533,8 @@ class _$_ParticipantCompetition implements _ParticipantCompetition {
 
 abstract class _ParticipantCompetition implements ParticipantCompetition {
   const factory _ParticipantCompetition(
-      {final int? id,
-      final int? competitionId,
+      {final String? id,
+      final String? competitionId,
       final int? rawResult,
       final int? result,
       final int? qRawResult,
@@ -544,9 +544,9 @@ abstract class _ParticipantCompetition implements ParticipantCompetition {
       _$_ParticipantCompetition.fromJson;
 
   @override
-  int? get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  int? get competitionId => throw _privateConstructorUsedError;
+  String? get competitionId => throw _privateConstructorUsedError;
   @override
   int? get rawResult => throw _privateConstructorUsedError;
   @override

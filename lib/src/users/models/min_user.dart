@@ -6,7 +6,7 @@ part 'min_user.g.dart';
 @freezed
 class MinUser with _$MinUser {
   factory MinUser({
-    required int id,
+    required String id,
     required String username,
     String? name,
   }) = _MinUser;

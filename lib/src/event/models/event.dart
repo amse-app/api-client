@@ -6,7 +6,7 @@ part 'event.freezed.dart';
 @freezed
 class Event with _$Event {
   const factory Event(
-      {required int id,
+      {required String id,
       required String short,
       String? name,
       String? description,

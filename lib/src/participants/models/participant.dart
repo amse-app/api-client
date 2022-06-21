@@ -6,7 +6,7 @@ part 'participant.g.dart';
 @freezed
 class Participant with _$Participant {
   const factory Participant({
-    int? id,
+    String? id,
     String? name,
     DateTime? birth,
     String? number,
@@ -23,8 +23,8 @@ class Participant with _$Participant {
 @freezed
 class ParticipantCompetition with _$ParticipantCompetition {
   const factory ParticipantCompetition({
-    int? id,
-    int? competitionId,
+    String? id,
+    String? competitionId,
     int? rawResult,
     int? result,
     int? qRawResult,
