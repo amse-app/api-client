@@ -24,7 +24,7 @@ mixin _$Participant {
   String? get name => throw _privateConstructorUsedError;
   DateTime? get birth => throw _privateConstructorUsedError;
   String? get number => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get data => throw _privateConstructorUsedError;
+  dynamic get data => throw _privateConstructorUsedError;
   DateTime? get createdAt => throw _privateConstructorUsedError;
   DateTime? get updatedAt => throw _privateConstructorUsedError;
   List<ParticipantCompetition>? get competitions =>
@@ -46,7 +46,7 @@ abstract class $ParticipantCopyWith<$Res> {
       String? name,
       DateTime? birth,
       String? number,
-      Map<String, dynamic>? data,
+      dynamic data,
       DateTime? createdAt,
       DateTime? updatedAt,
       List<ParticipantCompetition>? competitions});
@@ -91,7 +91,7 @@ class _$ParticipantCopyWithImpl<$Res> implements $ParticipantCopyWith<$Res> {
       data: data == freezed
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as dynamic,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -120,7 +120,7 @@ abstract class _$$_ParticipantCopyWith<$Res>
       String? name,
       DateTime? birth,
       String? number,
-      Map<String, dynamic>? data,
+      dynamic data,
       DateTime? createdAt,
       DateTime? updatedAt,
       List<ParticipantCompetition>? competitions});
@@ -165,9 +165,9 @@ class __$$_ParticipantCopyWithImpl<$Res> extends _$ParticipantCopyWithImpl<$Res>
           : number // ignore: cast_nullable_to_non_nullable
               as String?,
       data: data == freezed
-          ? _value._data
+          ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as dynamic,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -192,12 +192,11 @@ class _$_Participant implements _Participant {
       this.name,
       this.birth,
       this.number,
-      final Map<String, dynamic>? data,
+      this.data,
       this.createdAt,
       this.updatedAt,
       final List<ParticipantCompetition>? competitions})
-      : _data = data,
-        _competitions = competitions;
+      : _competitions = competitions;
 
   factory _$_Participant.fromJson(Map<String, dynamic> json) =>
       _$$_ParticipantFromJson(json);
@@ -210,15 +209,8 @@ class _$_Participant implements _Participant {
   final DateTime? birth;
   @override
   final String? number;
-  final Map<String, dynamic>? _data;
   @override
-  Map<String, dynamic>? get data {
-    final value = _data;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
-
+  final dynamic data;
   @override
   final DateTime? createdAt;
   @override
@@ -246,7 +238,7 @@ class _$_Participant implements _Participant {
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.birth, birth) &&
             const DeepCollectionEquality().equals(other.number, number) &&
-            const DeepCollectionEquality().equals(other._data, _data) &&
+            const DeepCollectionEquality().equals(other.data, data) &&
             const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
             const DeepCollectionEquality().equals(other.updatedAt, updatedAt) &&
             const DeepCollectionEquality()
@@ -261,7 +253,7 @@ class _$_Participant implements _Participant {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(birth),
       const DeepCollectionEquality().hash(number),
-      const DeepCollectionEquality().hash(_data),
+      const DeepCollectionEquality().hash(data),
       const DeepCollectionEquality().hash(createdAt),
       const DeepCollectionEquality().hash(updatedAt),
       const DeepCollectionEquality().hash(_competitions));
@@ -283,7 +275,7 @@ abstract class _Participant implements Participant {
       final String? name,
       final DateTime? birth,
       final String? number,
-      final Map<String, dynamic>? data,
+      final dynamic data,
       final DateTime? createdAt,
       final DateTime? updatedAt,
       final List<ParticipantCompetition>? competitions}) = _$_Participant;
@@ -300,7 +292,7 @@ abstract class _Participant implements Participant {
   @override
   String? get number => throw _privateConstructorUsedError;
   @override
-  Map<String, dynamic>? get data => throw _privateConstructorUsedError;
+  dynamic get data => throw _privateConstructorUsedError;
   @override
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @override

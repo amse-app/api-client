@@ -28,7 +28,7 @@ mixin _$User {
   DateTime get createdAt => throw _privateConstructorUsedError;
   DateTime get updatedAt => throw _privateConstructorUsedError;
   int? get recoveryCode => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get data => throw _privateConstructorUsedError;
+  dynamic get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -48,7 +48,7 @@ abstract class $UserCopyWith<$Res> {
       DateTime createdAt,
       DateTime updatedAt,
       int? recoveryCode,
-      Map<String, dynamic>? data});
+      dynamic data});
 }
 
 /// @nodoc
@@ -107,7 +107,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       data: data == freezed
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as dynamic,
     ));
   }
 }
@@ -126,7 +126,7 @@ abstract class _$$_UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       DateTime createdAt,
       DateTime updatedAt,
       int? recoveryCode,
-      Map<String, dynamic>? data});
+      dynamic data});
 }
 
 /// @nodoc
@@ -184,9 +184,9 @@ class __$$_UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           : recoveryCode // ignore: cast_nullable_to_non_nullable
               as int?,
       data: data == freezed
-          ? _value._data
+          ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
+              as dynamic,
     ));
   }
 }
@@ -203,9 +203,8 @@ class _$_User implements _User {
       required this.createdAt,
       required this.updatedAt,
       this.recoveryCode,
-      final Map<String, dynamic>? data})
-      : _roles = roles,
-        _data = data;
+      this.data})
+      : _roles = roles;
 
   factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
@@ -230,14 +229,8 @@ class _$_User implements _User {
   final DateTime updatedAt;
   @override
   final int? recoveryCode;
-  final Map<String, dynamic>? _data;
   @override
-  Map<String, dynamic>? get data {
-    final value = _data;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(value);
-  }
+  final dynamic data;
 
   @override
   String toString() {
@@ -258,7 +251,7 @@ class _$_User implements _User {
             const DeepCollectionEquality().equals(other.updatedAt, updatedAt) &&
             const DeepCollectionEquality()
                 .equals(other.recoveryCode, recoveryCode) &&
-            const DeepCollectionEquality().equals(other._data, _data));
+            const DeepCollectionEquality().equals(other.data, data));
   }
 
   @JsonKey(ignore: true)
@@ -273,7 +266,7 @@ class _$_User implements _User {
       const DeepCollectionEquality().hash(createdAt),
       const DeepCollectionEquality().hash(updatedAt),
       const DeepCollectionEquality().hash(recoveryCode),
-      const DeepCollectionEquality().hash(_data));
+      const DeepCollectionEquality().hash(data));
 
   @JsonKey(ignore: true)
   @override
@@ -296,7 +289,7 @@ abstract class _User implements User {
       required final DateTime createdAt,
       required final DateTime updatedAt,
       final int? recoveryCode,
-      final Map<String, dynamic>? data}) = _$_User;
+      final dynamic data}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
@@ -317,7 +310,7 @@ abstract class _User implements User {
   @override
   int? get recoveryCode => throw _privateConstructorUsedError;
   @override
-  Map<String, dynamic>? get data => throw _privateConstructorUsedError;
+  dynamic get data => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_UserCopyWith<_$_User> get copyWith => throw _privateConstructorUsedError;

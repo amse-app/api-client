@@ -17,7 +17,7 @@ _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
       createdAt: DateTime.parse(json['createdAt'] as String),
       updatedAt: DateTime.parse(json['updatedAt'] as String),
       recoveryCode: json['recoveryCode'] as int?,
-      data: json['data'] as Map<String, dynamic>?,
+      data: json['data'],
     );
 
 Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{

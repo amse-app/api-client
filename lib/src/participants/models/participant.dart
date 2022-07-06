@@ -10,7 +10,7 @@ class Participant with _$Participant {
     String? name,
     DateTime? birth,
     String? number,
-    Map<String, dynamic>? data,
+    dynamic data,
     DateTime? createdAt,
     DateTime? updatedAt,
     List<ParticipantCompetition>? competitions,

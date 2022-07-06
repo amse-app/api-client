@@ -14,7 +14,7 @@ _$_Participant _$$_ParticipantFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['birth'] as String),
       number: json['number'] as String?,
-      data: json['data'] as Map<String, dynamic>?,
+      data: json['data'],
       createdAt: json['createdAt'] == null
           ? null
           : DateTime.parse(json['createdAt'] as String),
