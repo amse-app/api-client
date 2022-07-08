@@ -16,7 +16,7 @@ class ResultsRepo {
     try {
       var res = await client.post(_url.replace(path: "result/$id"),
           body: jsonEncode(payload));
-      if (res.statusCode == 200) {
+      if (res.statusCode == 201) {
         return jsonDecode(utf8.decode(res.bodyBytes))["points"];
       } else {
         throw Exception("Couldnt add a result");
